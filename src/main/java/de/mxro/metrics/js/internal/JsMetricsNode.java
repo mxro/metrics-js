@@ -26,6 +26,16 @@ public class JsMetricsNode implements Exportable {
         this.metrics = metrics;
     }
 
+    @Export
+    public void value(final String id, final long value) {
+
+    }
+
+    @Export
+    public String render() {
+        return this.metrics.render().get();
+    }
+
     public JsMetricsNode() {
         super();
     }
