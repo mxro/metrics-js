@@ -1,5 +1,5 @@
 /**
- * Module private implementations.
+ * <p>Module private implementations.
  * @author <a href="http://www.mxro.de">Max Rohde</a>
  *
  */

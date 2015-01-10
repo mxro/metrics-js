@@ -29,7 +29,6 @@
 			<version>0.0.2</version>
 		</dependency>
 
-
 		<dependency>
 			<groupId>de.mxro.thrd.gwtexporter250</groupId>
 			<artifactId>thrdGwtExporter250</artifactId>
