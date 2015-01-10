@@ -7,6 +7,12 @@ import org.timepedia.exporter.client.NoExport;
 import de.mxro.metrics.MetricsCommon;
 import de.mxro.metrics.MetricsNode;
 
+/**
+ * JavaScript wrapper for {@link MetricsNode}.
+ * 
+ * @author <a href="http://www.mxro.de">Max Rohde</a>
+ *
+ */
 @Export
 public class JsMetricsNode implements Exportable {
 

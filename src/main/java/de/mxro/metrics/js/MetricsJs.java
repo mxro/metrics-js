@@ -7,6 +7,12 @@ import org.timepedia.exporter.client.Exportable;
 import de.mxro.metrics.MetricsCommon;
 import de.mxro.metrics.js.internal.JsMetricsNode;
 
+/**
+ * Facade class to initialize new metrics instances.
+ * 
+ * @author <a href="http://www.mxro.de">Max Rohde</a>
+ *
+ */
 @ExportPackage("")
 @Export("Nextweb")
 public class MetricsJs implements Exportable {
