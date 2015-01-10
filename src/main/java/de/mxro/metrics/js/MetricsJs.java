@@ -5,7 +5,6 @@ import org.timepedia.exporter.client.ExportPackage;
 import org.timepedia.exporter.client.Exportable;
 
 import de.mxro.metrics.MetricsCommon;
-import de.mxro.metrics.js.internal.JsMetricsNode;
 
 /**
  * Facade class to initialize new metrics instances.

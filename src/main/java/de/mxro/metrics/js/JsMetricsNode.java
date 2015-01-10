@@ -1,4 +1,4 @@
-package de.mxro.metrics.js.internal;
+package de.mxro.metrics.js;
 
 import org.timepedia.exporter.client.Export;
 import org.timepedia.exporter.client.Exportable;
