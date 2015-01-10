@@ -8,6 +8,12 @@ import org.timepedia.exporter.client.Exportable;
 @Export("Nextweb")
 public class MetricsJs implements Exportable {
 
+    
+    @Export
+    public static JsMetricsNode create() {
+        
+    }
+    
     public MetricsJs() {
         super();
     }
