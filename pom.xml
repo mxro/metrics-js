@@ -30,7 +30,7 @@
 		</dependency>
 
 
-<dependency>
+		<dependency>
 			<groupId>de.mxro.thrd.gwtexporter250</groupId>
 			<artifactId>thrdGwtExporter250</artifactId>
 			<version>[0.0.1,)</version>
