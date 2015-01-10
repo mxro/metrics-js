@@ -4,6 +4,7 @@ import org.timepedia.exporter.client.Export;
 import org.timepedia.exporter.client.Exportable;
 import org.timepedia.exporter.client.NoExport;
 
+import de.mxro.metrics.MetricsCommon;
 import de.mxro.metrics.MetricsNode;
 
 @Export
@@ -27,8 +28,8 @@ public class JsMetricsNode implements Exportable {
     }
 
     @Export
-    public void value(final String id, final long value) {
-
+    public void value(final String id, final int value) {
+        this.metrics.record(MetricsCommon.value(id, value));
     }
 
     @Export
