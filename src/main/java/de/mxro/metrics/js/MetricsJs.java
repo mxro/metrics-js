@@ -4,6 +4,7 @@ import org.timepedia.exporter.client.Export;
 import org.timepedia.exporter.client.ExportPackage;
 import org.timepedia.exporter.client.Exportable;
 
+import de.mxro.metrics.MetricsCommon;
 import de.mxro.metrics.js.internal.JsMetricsNode;
 
 @ExportPackage("")
@@ -12,7 +13,7 @@ public class MetricsJs implements Exportable {
 
     @Export
     public static JsMetricsNode create() {
-
+        return JsMetricsNode.wrap(MetricsCommon.createUnsafe());
     }
 
     public MetricsJs() {
