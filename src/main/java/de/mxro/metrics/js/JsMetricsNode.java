@@ -58,6 +58,11 @@ public class JsMetricsNode implements Exportable {
         return this.metrics.render().get();
     }
 
+    @Export
+    public void print() {
+
+    }
+
     public JsMetricsNode() {
         super();
     }
