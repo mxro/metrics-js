@@ -5,10 +5,10 @@ import org.timepedia.exporter.client.Exportable;
 import org.timepedia.exporter.client.NoExport;
 
 import de.mxro.metrics.MetricsCommon;
-import de.mxro.metrics.MetricsNode;
+import de.mxro.metrics.PropertyNode;
 
 /**
- * JavaScript wrapper for {@link MetricsNode}.
+ * JavaScript wrapper for {@link PropertyNode}.
  * 
  * @author <a href="http://www.mxro.de">Max Rohde</a>
  *
@@ -17,7 +17,7 @@ import de.mxro.metrics.MetricsNode;
 public class JsMetricsNode implements Exportable {
 
     @NoExport
-    public static JsMetricsNode wrap(final MetricsNode metrics) {
+    public static JsMetricsNode wrap(final PropertyNode metrics) {
         final JsMetricsNode jsMetricsNode = new JsMetricsNode();
 
         jsMetricsNode.setDecorated(metrics);
@@ -26,31 +26,31 @@ public class JsMetricsNode implements Exportable {
     }
 
     @NoExport
-    private MetricsNode metrics;
+    private PropertyNode metrics;
 
     @NoExport
-    private void setDecorated(final MetricsNode metrics) {
+    private void setDecorated(final PropertyNode metrics) {
         this.metrics = metrics;
     }
 
     @Export
     public void value(final String id, final int value) {
-        this.metrics.record(MetricsCommon.value(id, value));
+        this.metrics.perform(MetricsCommon.value(id, value));
     }
 
     @Export
     public void happened(final String id) {
-        this.metrics.record(MetricsCommon.happened(id));
+        this.metrics.perform(MetricsCommon.happened(id));
     }
 
     @Export
     public void increment(final String id) {
-        this.metrics.record(MetricsCommon.increment(id));
+        this.metrics.perform(MetricsCommon.increment(id));
     }
 
     @Export
     public void decrement(final String id) {
-        this.metrics.record(MetricsCommon.decrement(id));
+        this.metrics.perform(MetricsCommon.decrement(id));
     }
 
     @Export
