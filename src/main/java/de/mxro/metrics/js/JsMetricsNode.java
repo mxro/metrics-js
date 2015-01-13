@@ -4,8 +4,8 @@ import org.timepedia.exporter.client.Export;
 import org.timepedia.exporter.client.Exportable;
 import org.timepedia.exporter.client.NoExport;
 
+import de.mxro.async.properties.PropertyNode;
 import de.mxro.metrics.MetricsCommon;
-import de.mxro.metrics.PropertyNode;
 
 /**
  * JavaScript wrapper for {@link PropertyNode}.
