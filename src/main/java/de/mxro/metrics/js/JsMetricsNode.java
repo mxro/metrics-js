@@ -35,22 +35,22 @@ public class JsMetricsNode implements Exportable {
 
     @Export
     public void value(final String id, final int value) {
-        this.metrics.perform(MetricsCommon.value(id, value));
+        this.metrics.record(MetricsCommon.value(id, value));
     }
 
     @Export
     public void happened(final String id) {
-        this.metrics.perform(MetricsCommon.happened(id));
+        this.metrics.record(MetricsCommon.happened(id));
     }
 
     @Export
     public void increment(final String id) {
-        this.metrics.perform(MetricsCommon.increment(id));
+        this.metrics.record(MetricsCommon.increment(id));
     }
 
     @Export
     public void decrement(final String id) {
-        this.metrics.perform(MetricsCommon.decrement(id));
+        this.metrics.record(MetricsCommon.decrement(id));
     }
 
     @Export
