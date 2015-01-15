@@ -3,7 +3,6 @@
 	
 	<inherits name='de.mxro.metrics.Metrics' /> 
 
-
 	<source path=''>
 		<exclude name="**/jre/**" />
 	</source>
