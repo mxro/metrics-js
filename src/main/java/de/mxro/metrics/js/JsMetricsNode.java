@@ -1,10 +1,11 @@
 package de.mxro.metrics.js;
 
+import delight.async.properties.PropertyNode;
+
 import org.timepedia.exporter.client.Export;
 import org.timepedia.exporter.client.Exportable;
 import org.timepedia.exporter.client.NoExport;
 
-import de.mxro.async.properties.PropertyNode;
 import de.mxro.metrics.MetricsCommon;
 
 /**
