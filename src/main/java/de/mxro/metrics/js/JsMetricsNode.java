@@ -2,10 +2,6 @@ package de.mxro.metrics.js;
 
 import delight.async.properties.PropertyNode;
 
-import org.timepedia.exporter.client.Export;
-import org.timepedia.exporter.client.Exportable;
-import org.timepedia.exporter.client.NoExport;
-
 import de.mxro.metrics.MetricsCommon;
 
 /**
@@ -14,10 +10,9 @@ import de.mxro.metrics.MetricsCommon;
  * @author <a href="http://www.mxro.de">Max Rohde</a>
  *
  */
-@Export
-public class JsMetricsNode implements Exportable {
+@jsinterop.annotations.JsType public class JsMetricsNode {
 
-    @NoExport
+    @jsinterop.annotations.JsIgnore
     public static JsMetricsNode wrap(final PropertyNode metrics) {
         final JsMetricsNode jsMetricsNode = new JsMetricsNode();
 
@@ -26,41 +21,35 @@ public class JsMetricsNode implements Exportable {
         return jsMetricsNode;
     }
 
-    @NoExport
+    @jsinterop.annotations.JsIgnore
     private PropertyNode metrics;
 
-    @NoExport
+    @jsinterop.annotations.JsIgnore
     private void setDecorated(final PropertyNode metrics) {
         this.metrics = metrics;
     }
 
-    @Export
-    public void value(final String id, final int value) {
+    @delight.functional.annotations.ExportedElement public void value(final String id, final int value) {
         this.metrics.record(MetricsCommon.value(id, value));
     }
 
-    @Export
-    public void happened(final String id) {
+    @delight.functional.annotations.ExportedElement public void happened(final String id) {
         this.metrics.record(MetricsCommon.happened(id));
     }
 
-    @Export
-    public void increment(final String id) {
+    @delight.functional.annotations.ExportedElement public void increment(final String id) {
         this.metrics.record(MetricsCommon.increment(id));
     }
 
-    @Export
-    public void decrement(final String id) {
+    @delight.functional.annotations.ExportedElement public void decrement(final String id) {
         this.metrics.record(MetricsCommon.decrement(id));
     }
 
-    @Export
-    public String render() {
+    @delight.functional.annotations.ExportedElement public String render() {
         return this.metrics.render().get();
     }
 
-    @Export
-    public void print() {
+    @delight.functional.annotations.ExportedElement public void print() {
 
     }
 
