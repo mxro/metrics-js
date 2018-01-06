@@ -326,6 +326,7 @@
 		</developer>
 	</developers>
 
+
 	<scm>
 		<connection>scm:git:git@github.com:mxro/metrics-js.git</connection>
 		<url>https://github.com/mxro/metrics-js</url>
